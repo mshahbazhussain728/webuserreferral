@@ -1,0 +1,68 @@
+// import { TableHeading } from "../../../base-component/ui/table-heading";
+
+// export const ReedeemHistoryTableHeadings = ({
+//   headings,
+//   handleSort,
+//   sortValue,
+//   isRedeem,
+// }) => {
+//   return (
+//     <div className="py-2.5 px-10  grid grid-cols-[minmax(170px,_3fr)_minmax(170px,_3fr)_minmax(170px,_170px)] items-center mb-3">
+//       {headings?.map((heading, index) => (
+//         <TableHeading
+//           key={heading.value}
+//           title={heading.label}
+//           value={heading.value}
+//           isFirst={index === 0}
+//           isAligned={true}
+//           handleSort={handleSort}
+//           currentSort={sortValue}
+//           isRedeem={isRedeem}
+//         />
+//       ))}
+//     </div>
+//   );
+// };
+
+
+import { TableHeading } from "../../../base-component/ui/table-heading";
+
+// Default headings based on API response fields
+const DEFAULT_HEADINGS = [
+  { 
+    label: "Points", 
+    value: "points" 
+  },
+  { 
+    label: "Status", 
+    value: "status" 
+  },
+  { 
+    label: "Created Date", 
+    value: "createdAt" 
+  },
+];
+
+export const ReedeemHistoryTableHeadings = ({
+  headings = DEFAULT_HEADINGS,
+  handleSort,
+  sortValue,
+  isRedeem,
+}) => {
+  return (
+    <div className="py-2.5 px-10  grid grid-cols-[minmax(170px,_3fr)_minmax(170px,_3fr)_minmax(170px,_170px)] items-center mb-3">
+      {headings?.map((heading, index) => (
+        <TableHeading
+          key={heading.value}
+          title={heading.label}
+          value={heading.value}
+          isFirst={index === 0}
+          isAligned={true}
+          handleSort={handleSort}
+          currentSort={sortValue}
+          isRedeem={isRedeem}
+        />
+      ))}
+    </div>
+  );
+};
