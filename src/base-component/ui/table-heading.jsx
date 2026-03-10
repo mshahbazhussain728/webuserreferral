@@ -19,7 +19,7 @@ export const TableHeading = ({
 
   return (
     <div
-      className={`flex items-center gap-x-1.5  ${
+      className={`flex items-start gap-x-1.5 ${
         isAligned ? (isFirst ? "justify-start" : "justify-center") : ""
       }`}
     >

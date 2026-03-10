@@ -9,7 +9,8 @@ const initialState = {
   },
 };
 
-const BASEURL = "https://apis.famocare.com/api";
+// const BASEURL = "https://apis.famocare.com/api";
+const BASEURL = "https://referralapis.appistan.co/api";
 export const uploadFile = createAsyncThunk(
   "file/upload",
   async (data, { rejectWithValue }) => {

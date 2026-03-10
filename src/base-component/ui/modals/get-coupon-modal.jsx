@@ -25,4 +25,6 @@ export const GetCouponModal = ({ onClose }) => {
       </div>
     </BaseModal>
   );
-};
+}
+
+

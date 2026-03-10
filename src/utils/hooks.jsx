@@ -42,3 +42,10 @@ export const useGlobalUser = (user, dispatch) => {
     dispatch(setSignedUser(cookieUser));
   }
 };
+
+
+
+
+
+
+

@@ -1,12 +1,198 @@
+// // // // // import { TableHeading } from "../../../base-component/ui/table-heading";
+
+// // // // // export const MonthlyPremUserTableHeadings = ({
+// // // // //   headings,
+// // // // //   handleSort,
+// // // // //   sortValue,
+// // // // // }) => {
+// // // // //   return (
+// // // // //     <div className="py-2.5 px-4 grid grid-cols-[minmax(200px,_4fr)_minmax(170px,_3fr)_minmax(170px,_3fr)_minmax(170px,_3fr)] items-center mb-3">
+// // // // //       {headings?.map((heading, index) => (
+// // // // //         <TableHeading
+// // // // //           key={index}
+// // // // //           title={heading.label}
+// // // // //           value={heading.value}
+// // // // //           isFirst={index === 0}
+// // // // //           isAligned={true}
+// // // // //           handleSort={handleSort}
+// // // // //           currentSort={sortValue}
+// // // // //         />
+// // // // //       ))}
+// // // // //     </div>
+// // // // //   );
+// // // // // };
+
+
+
+
+
+
+// // // // // import { TableHeading } from "../../../base-component/ui/table-heading";
+
+// // // // // export const MonthlyPremUserTableHeadings = ({
+// // // // //   headings,
+// // // // //   handleSort,
+// // // // //   sortValue,
+// // // // // }) => {
+// // // // //   return (
+// // // // //     <div className="py-2.5 px-4 grid grid-cols-[minmax(180px,_3fr)_minmax(150px,_2fr)_minmax(150px,_2fr)_minmax(150px,_2fr)_minmax(120px,_2fr)_minmax(100px,_1fr)] items-center mb-3 gap-x-4">
+// // // // //       {headings?.map((heading, index) => (
+// // // // //         <TableHeading
+// // // // //           key={index}
+// // // // //           title={heading.label}
+// // // // //           value={heading.value}
+// // // // //           isFirst={index === 0}
+// // // // //           isAligned={true}
+// // // // //           handleSort={handleSort}
+// // // // //           currentSort={sortValue}
+// // // // //         />
+// // // // //       ))}
+// // // // //     </div>
+// // // // //   );
+// // // // // };
+
+
+
+
+
+
+// // // // import { TableHeading } from "../../../base-component/ui/table-heading";
+
+// // // // export const MonthlyPremUserTableHeadings = ({
+// // // //   headings,
+// // // //   handleSort,
+// // // //   sortValue,
+// // // // }) => {
+// // // //   return (
+// // // //     <div className="py-2.5 px-4 grid grid-cols-[minmax(180px,_3fr)_minmax(150px,_2fr)_minmax(150px,_2fr)_minmax(100px,_1fr)] items-center mb-3 gap-x-4">
+// // // //       {headings?.map((heading, index) => (
+// // // //         <TableHeading
+// // // //           key={index}
+// // // //           title={heading.label}
+// // // //           value={heading.value}
+// // // //           isFirst={index === 0}
+// // // //           isAligned={true}
+// // // //           handleSort={handleSort}
+// // // //           currentSort={sortValue}
+// // // //         />
+// // // //       ))}
+// // // //     </div>
+// // // //   );
+// // // // };
+
+
+
+// // // import { TableHeading } from "../../../base-component/ui/table-heading";
+
+// // // export const MonthlyPremUserTableHeadings = ({ headings, handleSort, sortValue, isSubPage }) => {
+// // //   return (
+// // //     <div className={`py-2.5 px-4 grid ${
+// // //       isSubPage
+// // //         ? "grid-cols-[minmax(180px,_3fr)_minmax(200px,_3fr)_minmax(150px,_2fr)_minmax(150px,_2fr)_minmax(120px,_2fr)_minmax(100px,_1fr)]"
+// // //         : "grid-cols-[minmax(180px,_3fr)_minmax(200px,_3fr)_minmax(150px,_2fr)_minmax(100px,_1fr)]"
+// // //     } items-center mb-3 gap-x-4`}>
+// // //       {headings?.map((heading, index) => (
+// // //         <TableHeading
+// // //           key={index}
+// // //           title={heading.label}
+// // //           value={heading.value}
+// // //           isFirst={index === 0}
+// // //           isAligned={true}
+// // //           handleSort={handleSort}
+// // //           currentSort={sortValue}
+// // //         />
+// // //       ))}
+// // //     </div>
+// // //   );
+// // // };
+
+
+
+
+
+// // // import { TableHeading } from "../../../base-component/ui/table-heading";
+
+// // // export const MonthlyPremUserTableHeadings = ({ headings, handleSort, sortValue, isSubPage }) => {
+// // //   return (
+// // //     <div
+// // //       className={`py-2.5 px-4 grid items-center mb-3 gap-x-4 ${
+// // //         isSubPage
+// // //           ? "grid-cols-[minmax(180px,_3fr)_minmax(200px,_3fr)_minmax(150px,_2fr)_minmax(150px,_2fr)_minmax(120px,_2fr)_minmax(100px,_1fr)]"
+// // //           : "grid-cols-[minmax(180px,_3fr)_minmax(200px,_3fr)_minmax(150px,_2fr)_minmax(100px,_1fr)]"
+// // //       }`}
+// // //     >
+// // //       {headings?.map((heading, index) => (
+// // //         <TableHeading
+// // //           key={index}
+// // //           title={heading.label}
+// // //           value={heading.value}
+// // //           isFirst={index === 0}
+// // //           isAligned={true}
+// // //           handleSort={handleSort}
+// // //           currentSort={sortValue}
+// // //         />
+// // //       ))}
+// // //     </div>
+// // //   );
+// // // };
+
+
+// // import { TableHeading } from "../../../base-component/ui/table-heading";
+
+// // export const MonthlyPremUserTableHeadings = ({ headings, handleSort, sortValue }) => {
+// //   return (
+// //     <div className="py-2.5 px-4 grid grid-cols-[minmax(180px,_3fr)_minmax(150px,_2fr)_minmax(150px,_2fr)_minmax(150px,_2fr)_minmax(120px,_2fr)_minmax(100px,_1fr)] items-center mb-3 gap-x-4">
+// //       {headings?.map((heading, index) => (
+// //         <TableHeading
+// //           key={index}
+// //           title={heading.label}
+// //           value={heading.value}
+// //           isFirst={index === 0}
+// //           isAligned={true}
+// //           handleSort={handleSort}
+// //           currentSort={sortValue}
+// //         />
+// //       ))}
+// //     </div>
+// //   );
+// // };
+
+
+
+
+
+
+
+
+// import { TableHeading } from "../../../base-component/ui/table-heading";
+
+// export const MonthlyPremUserTableHeadings = ({ headings, handleSort, sortValue }) => {
+//   return (
+//     <div className="py-2.5 px-4 grid grid-cols-[2fr_1fr_1.2fr_1.2fr_0.8fr_0.6fr] items-center mb-3 gap-x-4">
+//       {headings?.map((heading, index) => (
+//         <TableHeading
+//           key={index}
+//           title={heading.label}
+//           value={heading.value}
+//           isFirst={index === 0}
+//           isAligned={true}
+//           handleSort={handleSort}
+//           currentSort={sortValue}
+//         />
+//       ))}
+//     </div>
+//   );
+// };
+
+
+
+
+
 import { TableHeading } from "../../../base-component/ui/table-heading";
 
-export const MonthlyPremUserTableHeadings = ({
-  headings,
-  handleSort,
-  sortValue,
-}) => {
+export const MonthlyPremUserTableHeadings = ({ headings, handleSort, sortValue }) => {
   return (
-    <div className="py-2.5 px-4 grid grid-cols-[minmax(200px,_4fr)_minmax(170px,_3fr)_minmax(170px,_3fr)_minmax(170px,_3fr)] items-center mb-3">
+    <div className="py-2.5 px-4 grid grid-cols-[minmax(180px,_3fr)_minmax(150px,_2fr)_minmax(150px,_2fr)_minmax(150px,_2fr)_minmax(120px,_2fr)_minmax(100px,_1fr)] items-center mb-3 gap-x-4">
       {headings?.map((heading, index) => (
         <TableHeading
           key={index}
@@ -21,3 +207,6 @@ export const MonthlyPremUserTableHeadings = ({
     </div>
   );
 };
+
+
+

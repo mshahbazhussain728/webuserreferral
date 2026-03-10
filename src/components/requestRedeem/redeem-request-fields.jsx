@@ -1,3 +1,145 @@
+// // // import { Field } from "../../utils/static";
+
+// // // export const RedeemRequestFormFields = (register, loading, control) => {
+// // //   let formField = [
+// // //     {
+// // //       field: {
+// // //         type: Field.div,
+// // //         id: "div-field",
+// // //         className: "flex items-center gap-x-3 w-full",
+// // //         children: [
+// // //           {
+// // //             containerClass: "mb-0 flex-1",
+// // //             field: {
+// // //               type: Field.input,
+// // //               id: "points",
+// // //               name: "points",
+// // //               inputType: "number",
+// // //               placeholder: "Enter points you want to redeem",
+// // //               className: "w-full pl-[18px]",
+// // //               register,
+// // //             },
+// // //           },
+
+// // //           {
+// // //             containerClass: "mb-0 flex-shrink-0",
+// // //             field: {
+// // //               type: Field.button,
+// // //               id: "button",
+// // //               text: "Send Request",
+// // //               inputType: "submit",
+// // //               className:
+// // //                 "rounded-[4.8px] w-auto min-w-[140px] !h-10 xMini:!h-[48px] hover:bg-none",
+// // //               loading,
+// // //             },
+// // //           },
+// // //         ],
+// // //       },
+// // //     },
+// // //   ];
+
+// // //   return formField;
+// // // };
+
+
+
+// // import { Field } from "../../utils/static";
+
+// // export const RedeemRequestFormFields = (register, loading, control) => {
+// //   let formField = [
+// //     {
+// //       field: {
+// //         type: Field.div,
+// //         id: "div-field",
+// //         className: "flex items-center gap-x-3 w-full",
+// //         style: { display: 'flex', flexWrap: 'nowrap', alignItems: 'center' },
+// //         children: [
+// //           {
+// //             containerClass: "mb-0",
+// //             style: { flex: '1 1 auto', minWidth: '0' },
+// //             field: {
+// //               type: Field.input,
+// //               id: "points",
+// //               name: "points",
+// //               inputType: "number",
+// //               placeholder: "Enter points you want to redeem",
+// //               className: "w-full pl-[18px]",
+// //               register,
+// //             },
+// //           },
+
+// //           {
+// //             containerClass: "mb-0",
+// //             style: { flex: '0 0 auto', flexShrink: 0 },
+// //             field: {
+// //               type: Field.button,
+// //               id: "button",
+// //               text: "Send Request",
+// //               inputType: "submit",
+// //               className:
+// //                 "rounded-[4.8px] !h-10 xMini:!h-[48px] hover:bg-none",
+// //               style: { width: '140px', minWidth: '140px', whiteSpace: 'nowrap' },
+// //               loading,
+// //             },
+// //           },
+// //         ],
+// //       },
+// //     },
+// //   ];
+
+// //   return formField;
+// // };
+
+
+
+
+// import { Field } from "../../utils/static";
+
+// export const RedeemRequestFormFields = (register, loading, control) => {
+//   let formField = [
+//     {
+//       field: {
+//         type: Field.div,
+//         id: "div-field",
+//         className: "flex items-start gap-x-3 w-full flex-nowrap",
+//         children: [
+//           {
+//             containerClass: "mb-0 flex-1 min-w-0",
+//             field: {
+//               type: Field.input,
+//               id: "points",
+//               name: "points",
+//               inputType: "number",
+//               placeholder: "Enter points you want to redeem",
+//               className: "w-full pl-[18px]",
+//               register,
+//               hideError: true, // Add this prop to hide inline errors if your Field component supports it
+//             },
+//           },
+
+//           {
+//             containerClass: "mb-0 flex-shrink-0 self-start",
+//             field: {
+//               type: Field.button,
+//               id: "button",
+//               text: "Send Request",
+//               inputType: "submit",
+//               className:
+//                 "rounded-[4.8px] w-[140px] !h-10 xMini:!h-[48px] hover:bg-none whitespace-nowrap",
+//               loading,
+//             },
+//           },
+//         ],
+//       },
+//     },
+//   ];
+
+//   return formField;
+// };
+
+
+
+
 import { Field } from "../../utils/static";
 
 export const RedeemRequestFormFields = (register, loading, control) => {
@@ -6,10 +148,10 @@ export const RedeemRequestFormFields = (register, loading, control) => {
       field: {
         type: Field.div,
         id: "div-field",
-        className: "flex items-center gap-x-3 w-full",
+        className: "flex items-start gap-x-3 w-full flex-nowrap",
         children: [
           {
-            containerClass: "mb-0 flex-1",
+            containerClass: "mb-0 flex-1 min-w-0",
             field: {
               type: Field.input,
               id: "points",
@@ -22,14 +164,14 @@ export const RedeemRequestFormFields = (register, loading, control) => {
           },
 
           {
-            containerClass: "mb-0",
+            containerClass: "mb-0 flex-shrink-0",
             field: {
               type: Field.button,
               id: "button",
               text: "Send Request",
               inputType: "submit",
               className:
-                "rounded-[4.8px] w-auto min-w-[140px] !h-10 xMini:!h-[48px] hover:bg-none",
+                "rounded-[4.8px] w-[140px] !h-10 xMini:!h-[48px] hover:bg-none whitespace-nowrap",
               loading,
             },
           },

@@ -57,16 +57,17 @@ export const RewardsCard = ({ cardAction, data }) => {
     <div className="bg-primary md:rounded-lg flex justify-between items-end pl-[30px] pr-[18px] pt-10 pb-[15px] md:py-[44px] md:pl-[56px] md:pr-[23px]">
       <div className="flex flex-col">
         <div className="flex items-baseline gap-x-2">
-          <span className="font-semibold text-[36px] md:text-[72px] text-white">
+          <span className="font-semibold text-[36px] md:text-[72px] text-white ml-[-24px]">
             {/* ✅ Changed data?.total to data?.active (same as Total Points Rewarded) */}
             {formatPoints(data?.active)}
           </span>
-          <span className="font-medium text-[15px] md:text-[28px] text-white">
+          <span className="font-medium text-[15px] md:text-[28px] text-white ml-[-5px]">
             Points
           </span>
         </div>
-        <div className="flex items-center gap-x-[10px]">
+        <div className="flex items-center gap-x-[5px] ml-[-24px]">
           <RewardBalanceIcon iconClassName="#fff" size={24} />
+
           <span className="font-medium text-sm md:text-[28px] text-white">
             Rewards balance
           </span>
@@ -93,3 +94,4 @@ export const RewardsCard = ({ cardAction, data }) => {
     </div>
   );
 };
+
