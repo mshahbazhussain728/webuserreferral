@@ -1,309 +1,309 @@
-// // // // import { useEmptyStates } from "../../utils/hooks";
-// // // // import { CouponHistoryTableRows } from "./table/table-rows";
-// // // // import { CouponHistoryTableHeadings } from "./table/table-heading";
-// // // // import { Pagination } from "../../base-component/ui/pagination/pagination";
-// // // // import { useCouponHistory } from "../../hooks/couponHistory/useCouponHistory";
-// // // // import SelectField from "../../base-component/ui/fields/select-fields";
-// // // // import { CouponDetailsCard } from "../../base-component/ui/coupon-details-card";
-// // // // import { NoDataEmptyState } from "../../base-component/ui/loadingEffect/no-data-state";
-// // // // import { CustomLoader } from "../../base-component/ui/loadingEffect/custom-loader";
+// // // // // // // import { useEmptyStates } from "../../utils/hooks";
+// // // // // // // import { CouponHistoryTableRows } from "./table/table-rows";
+// // // // // // // import { CouponHistoryTableHeadings } from "./table/table-heading";
+// // // // // // // import { Pagination } from "../../base-component/ui/pagination/pagination";
+// // // // // // // import { useCouponHistory } from "../../hooks/couponHistory/useCouponHistory";
+// // // // // // // import SelectField from "../../base-component/ui/fields/select-fields";
+// // // // // // // import { CouponDetailsCard } from "../../base-component/ui/coupon-details-card";
+// // // // // // // import { NoDataEmptyState } from "../../base-component/ui/loadingEffect/no-data-state";
+// // // // // // // import { CustomLoader } from "../../base-component/ui/loadingEffect/custom-loader";
 
-// // // // export const CouponHistory = () => {
-// // // //   const {
-// // // //     totalItems,
-// // // //     loading,
-// // // //     itemsPerPage,
-// // // //     currentPage,
-// // // //     headings,
-// // // //     couponHistory,
-// // // //     currentPageRows,
-// // // //     handlePageChange,
-// // // //     hanldeSortChange,
-// // // //     sort,
-// // // //     totalCount,
-// // // //   } = useCouponHistory();
+// // // // // // // export const CouponHistory = () => {
+// // // // // // //   const {
+// // // // // // //     totalItems,
+// // // // // // //     loading,
+// // // // // // //     itemsPerPage,
+// // // // // // //     currentPage,
+// // // // // // //     headings,
+// // // // // // //     couponHistory,
+// // // // // // //     currentPageRows,
+// // // // // // //     handlePageChange,
+// // // // // // //     hanldeSortChange,
+// // // // // // //     sort,
+// // // // // // //     totalCount,
+// // // // // // //   } = useCouponHistory();
 
-// // // //   const CurrentComponent = useEmptyStates(
-// // // //     <CouponHistoryTableRows data={currentPageRows?.data} />,
-// // // //     totalCount !== 0,
-// // // //     loading
-// // // //   );
+// // // // // // //   const CurrentComponent = useEmptyStates(
+// // // // // // //     <CouponHistoryTableRows data={currentPageRows?.data} />,
+// // // // // // //     totalCount !== 0,
+// // // // // // //     loading
+// // // // // // //   );
 
-// // // //   return (
-// // // //     <>
-// // // //       <div className="hidden md:block">
-// // // //         <CouponHistoryTableHeadings
-// // // //           headings={headings}
-// // // //           handleSort={hanldeSortChange}
-// // // //           sortValue={sort}
-// // // //           isRedeem={true}
-// // // //         />
-// // // //         {CurrentComponent}
-// // // //       </div>
+// // // // // // //   return (
+// // // // // // //     <>
+// // // // // // //       <div className="hidden md:block">
+// // // // // // //         <CouponHistoryTableHeadings
+// // // // // // //           headings={headings}
+// // // // // // //           handleSort={hanldeSortChange}
+// // // // // // //           sortValue={sort}
+// // // // // // //           isRedeem={true}
+// // // // // // //         />
+// // // // // // //         {CurrentComponent}
+// // // // // // //       </div>
 
-// // // //       <div className="flex items-center justify-between mt-[15px] mb-3 md:hidden">
-// // // //         <p className="text-[20px] font-semibold">Redeemed Listing</p>
-// // // //         <SelectField
-// // // //           handleChange={(value) => hanldeSortChange(value)}
-// // // //           value={sort || "None"}
-// // // //           options={[
-// // // //             {
-// // // //               label: "Type",
-// // // //               value: "type",
-// // // //             },
-// // // //             {
-// // // //               label: "Coupons",
-// // // //               value: "coupon",
-// // // //             },
-// // // //             {
-// // // //               label: "Redeemed Date",
-// // // //               value: "createdAt",
-// // // //             },
-// // // //             {
-// // // //               label: "Status",
-// // // //               value: "status",
-// // // //             },
-// // // //           ]}
-// // // //         />
-// // // //       </div>
+// // // // // // //       <div className="flex items-center justify-between mt-[15px] mb-3 md:hidden">
+// // // // // // //         <p className="text-[20px] font-semibold">Redeemed Listing</p>
+// // // // // // //         <SelectField
+// // // // // // //           handleChange={(value) => hanldeSortChange(value)}
+// // // // // // //           value={sort || "None"}
+// // // // // // //           options={[
+// // // // // // //             {
+// // // // // // //               label: "Type",
+// // // // // // //               value: "type",
+// // // // // // //             },
+// // // // // // //             {
+// // // // // // //               label: "Coupons",
+// // // // // // //               value: "coupon",
+// // // // // // //             },
+// // // // // // //             {
+// // // // // // //               label: "Redeemed Date",
+// // // // // // //               value: "createdAt",
+// // // // // // //             },
+// // // // // // //             {
+// // // // // // //               label: "Status",
+// // // // // // //               value: "status",
+// // // // // // //             },
+// // // // // // //           ]}
+// // // // // // //         />
+// // // // // // //       </div>
 
-// // // //       {loading ? (
-// // // //         <div className="flex justify-center items-center md:hidden">
-// // // //           <CustomLoader />
-// // // //         </div>
-// // // //       ) : currentPageRows?.data?.length > 0 ? (
-// // // //         <div className="md:hidden mb-10">
-// // // //           <CouponDetailsCard data={couponHistory} />
-// // // //         </div>
-// // // //       ) : (
-// // // //         <div className="md:hidden mt-10">
-// // // //           <NoDataEmptyState
-// // // //             imgClassName="w-14 h-14"
-// // // //             textClassName="text-lg"
-// // // //             className="py-5 px-3 w-full"
-// // // //           />
-// // // //         </div>
-// // // //       )}
+// // // // // // //       {loading ? (
+// // // // // // //         <div className="flex justify-center items-center md:hidden">
+// // // // // // //           <CustomLoader />
+// // // // // // //         </div>
+// // // // // // //       ) : currentPageRows?.data?.length > 0 ? (
+// // // // // // //         <div className="md:hidden mb-10">
+// // // // // // //           <CouponDetailsCard data={couponHistory} />
+// // // // // // //         </div>
+// // // // // // //       ) : (
+// // // // // // //         <div className="md:hidden mt-10">
+// // // // // // //           <NoDataEmptyState
+// // // // // // //             imgClassName="w-14 h-14"
+// // // // // // //             textClassName="text-lg"
+// // // // // // //             className="py-5 px-3 w-full"
+// // // // // // //           />
+// // // // // // //         </div>
+// // // // // // //       )}
 
-// // // //       {!loading && (
-// // // //         <div className="hidden md:block">
-// // // //           <Pagination
-// // // //             totalItems={totalItems}
-// // // //             itemsPerPage={itemsPerPage}
-// // // //             onPageChange={handlePageChange}
-// // // //             currentPage={currentPage}
-// // // //           />
-// // // //         </div>
-// // // //       )}
-// // // //     </>
-// // // //   );
-// // // // };
-
-
+// // // // // // //       {!loading && (
+// // // // // // //         <div className="hidden md:block">
+// // // // // // //           <Pagination
+// // // // // // //             totalItems={totalItems}
+// // // // // // //             itemsPerPage={itemsPerPage}
+// // // // // // //             onPageChange={handlePageChange}
+// // // // // // //             currentPage={currentPage}
+// // // // // // //           />
+// // // // // // //         </div>
+// // // // // // //       )}
+// // // // // // //     </>
+// // // // // // //   );
+// // // // // // // };
 
 
-// // import { useEmptyStates } from "../../utils/hooks";
-// // import { CouponHistoryTableRows } from "./table/table-rows";
-// // import { CouponHistoryTableHeadings } from "./table/table-heading";
-// // import { Pagination } from "../../base-component/ui/pagination/pagination";
-// // import { useCouponHistory } from "../../hooks/couponHistory/useCouponHistory";
-// // import SelectField from "../../base-component/ui/fields/select-fields";
-// // import { CouponDetailsCard } from "../../base-component/ui/coupon-details-card";
-// // import { NoDataEmptyState } from "../../base-component/ui/loadingEffect/no-data-state";
-// // import { CustomLoader } from "../../base-component/ui/loadingEffect/custom-loader";
-
-// // export const CouponHistory = () => {
-// //   const {
-// //     totalItems,
-// //     loading,
-// //     itemsPerPage,
-// //     currentPage,
-// //     headings,
-// //     couponHistory,
-// //     currentPageRows,
-// //     handlePageChange,
-// //     hanldeSortChange,
-// //     sort,
-// //     totalCount,
-// //   } = useCouponHistory();
-
-// //   console.log("🎯 CouponHistory Component Debug:");
-// //   console.log("currentPageRows?.data:", currentPageRows?.data);
-// //   console.log("currentPageRows?.data?.length:", currentPageRows?.data?.length);
-// //   console.log("loading:", loading);
-// //   console.log("totalCount:", totalCount);
-
-// //   const CurrentComponent = useEmptyStates(
-// //     <CouponHistoryTableRows data={currentPageRows?.data} />,
-// //     totalCount !== 0,
-// //     loading
-// //   );
-
-// //   return (
-// //     <>
-// //       <div className="hidden md:block">
-// //         <CouponHistoryTableHeadings
-// //           headings={headings}
-// //           handleSort={hanldeSortChange}
-// //           sortValue={sort}
-// //           isRedeem={true}
-// //         />
-// //         {CurrentComponent}
-// //       </div>
-
-// //       <div className="flex items-center justify-between mt-[15px] mb-3 md:hidden">
-// //         <p className="text-[20px] font-semibold">Redeemed Listing</p>
-// //         <SelectField
-// //           handleChange={(value) => hanldeSortChange(value)}
-// //           value={sort || "None"}
-// //           options={[
-// //             {
-// //               label: "Type",
-// //               value: "type",
-// //             },
-// //             {
-// //               label: "Coupons",
-// //               value: "coupon",
-// //             },
-// //             {
-// //               label: "Redeemed Date",
-// //               value: "createdAt",
-// //             },
-// //             {
-// //               label: "Status",
-// //               value: "status",
-// //             },
-// //           ]}
-// //         />
-// //       </div>
-
-// //       {loading ? (
-// //         <div className="flex justify-center items-center md:hidden">
-// //           <CustomLoader />
-// //         </div>
-// //       ) : currentPageRows?.data && currentPageRows?.data?.length > 0 ? (
-// //         <div className="md:hidden mb-10">
-// //           {console.log("🎯 Rendering CouponDetailsCard with data:", currentPageRows?.data)}
-// //           <CouponDetailsCard data={currentPageRows?.data} />
-// //         </div>
-// //       ) : (
-// //         <div className="md:hidden mt-10">
-// //           {console.log("🎯 No data - showing empty state")}
-// //           <NoDataEmptyState
-// //             imgClassName="w-14 h-14"
-// //             textClassName="text-lg"
-// //             className="py-5 px-3 w-full"
-// //           />
-// //         </div>
-// //       )}
-
-// //       {!loading && (
-// //         <div className="hidden md:block">
-// //           <Pagination
-// //             totalItems={totalItems}
-// //             itemsPerPage={itemsPerPage}
-// //             onPageChange={handlePageChange}
-// //             currentPage={currentPage}
-// //           />
-// //         </div>
-// //       )}
-// //     </>
-// //   );
-// // };
 
 
-// // import { useEmptyStates } from "../../utils/hooks";
-// // import { CouponHistoryTableRows } from "./table/table-rows";
-// // import { CouponHistoryTableHeadings } from "./table/table-heading";
-// // import { Pagination } from "../../base-component/ui/pagination/pagination";
-// // import { useCouponHistory } from "../../hooks/couponHistory/useCouponHistory";
-// // import SelectField from "../../base-component/ui/fields/select-fields";
-// // import { CouponDetailsCard } from "../../base-component/ui/coupon-details-card";
-// // import { NoDataEmptyState } from "../../base-component/ui/loadingEffect/no-data-state";
-// // import { CustomLoader } from "../../base-component/ui/loadingEffect/custom-loader";
+// // // // // import { useEmptyStates } from "../../utils/hooks";
+// // // // // import { CouponHistoryTableRows } from "./table/table-rows";
+// // // // // import { CouponHistoryTableHeadings } from "./table/table-heading";
+// // // // // import { Pagination } from "../../base-component/ui/pagination/pagination";
+// // // // // import { useCouponHistory } from "../../hooks/couponHistory/useCouponHistory";
+// // // // // import SelectField from "../../base-component/ui/fields/select-fields";
+// // // // // import { CouponDetailsCard } from "../../base-component/ui/coupon-details-card";
+// // // // // import { NoDataEmptyState } from "../../base-component/ui/loadingEffect/no-data-state";
+// // // // // import { CustomLoader } from "../../base-component/ui/loadingEffect/custom-loader";
 
-// // export const CouponHistory = () => {
-// //   const {
-// //     totalItems,
-// //     loading,
-// //     itemsPerPage,
-// //     currentPage,
-// //     headings,
-// //     currentPageRows, // ✅ Always a plain array []
-// //     handlePageChange,
-// //     hanldeSortChange,
-// //     sort,
-// //     totalCount,
-// //   } = useCouponHistory();
+// // // // // export const CouponHistory = () => {
+// // // // //   const {
+// // // // //     totalItems,
+// // // // //     loading,
+// // // // //     itemsPerPage,
+// // // // //     currentPage,
+// // // // //     headings,
+// // // // //     couponHistory,
+// // // // //     currentPageRows,
+// // // // //     handlePageChange,
+// // // // //     hanldeSortChange,
+// // // // //     sort,
+// // // // //     totalCount,
+// // // // //   } = useCouponHistory();
 
-// //   // ✅ currentPageRows is a plain array — pass directly, no .data needed
-// //   const CurrentComponent = useEmptyStates(
-// //     <CouponHistoryTableRows data={currentPageRows} />,
-// //     totalCount !== 0,
-// //     loading
-// //   );
+// // // // //   console.log("🎯 CouponHistory Component Debug:");
+// // // // //   console.log("currentPageRows?.data:", currentPageRows?.data);
+// // // // //   console.log("currentPageRows?.data?.length:", currentPageRows?.data?.length);
+// // // // //   console.log("loading:", loading);
+// // // // //   console.log("totalCount:", totalCount);
 
-// //   return (
-// //     <>
-// //       {/* Desktop Table */}
-// //       <div className="hidden md:block">
-// //         <CouponHistoryTableHeadings
-// //           headings={headings}
-// //           handleSort={hanldeSortChange}
-// //           sortValue={sort}
-// //           isRedeem={true}
-// //         />
-// //         {CurrentComponent}
-// //       </div>
+// // // // //   const CurrentComponent = useEmptyStates(
+// // // // //     <CouponHistoryTableRows data={currentPageRows?.data} />,
+// // // // //     totalCount !== 0,
+// // // // //     loading
+// // // // //   );
 
-// //       {/* Mobile Header + Sort */}
-// //       <div className="flex items-center justify-between mt-[15px] mb-3 md:hidden">
-// //         <p className="text-[20px] font-semibold">Redeemed Listing</p>
-// //         <SelectField
-// //           handleChange={(value) => hanldeSortChange(value)}
-// //           value={sort || "None"}
-// //           options={[
-// //             { label: "Type", value: "type" },
-// //             { label: "Coupons", value: "coupon" },
-// //             { label: "Redeemed Date", value: "createdAt" },
-// //             { label: "Status", value: "status" },
-// //           ]}
-// //         />
-// //       </div>
+// // // // //   return (
+// // // // //     <>
+// // // // //       <div className="hidden md:block">
+// // // // //         <CouponHistoryTableHeadings
+// // // // //           headings={headings}
+// // // // //           handleSort={hanldeSortChange}
+// // // // //           sortValue={sort}
+// // // // //           isRedeem={true}
+// // // // //         />
+// // // // //         {CurrentComponent}
+// // // // //       </div>
 
-// //       {/* Mobile Content — currentPageRows is the array directly */}
-// //       {loading ? (
-// //         <div className="flex justify-center items-center md:hidden">
-// //           <CustomLoader />
-// //         </div>
-// //       ) : currentPageRows.length > 0 ? (
-// //         <div className="md:hidden mb-10">
-// //           <CouponDetailsCard data={currentPageRows} />
-// //         </div>
-// //       ) : (
-// //         <div className="md:hidden mt-10">
-// //           <NoDataEmptyState
-// //             imgClassName="w-14 h-14"
-// //             textClassName="text-lg"
-// //             className="py-5 px-3 w-full"
-// //           />
-// //         </div>
-// //       )}
+// // // // //       <div className="flex items-center justify-between mt-[15px] mb-3 md:hidden">
+// // // // //         <p className="text-[20px] font-semibold">Redeemed Listing</p>
+// // // // //         <SelectField
+// // // // //           handleChange={(value) => hanldeSortChange(value)}
+// // // // //           value={sort || "None"}
+// // // // //           options={[
+// // // // //             {
+// // // // //               label: "Type",
+// // // // //               value: "type",
+// // // // //             },
+// // // // //             {
+// // // // //               label: "Coupons",
+// // // // //               value: "coupon",
+// // // // //             },
+// // // // //             {
+// // // // //               label: "Redeemed Date",
+// // // // //               value: "createdAt",
+// // // // //             },
+// // // // //             {
+// // // // //               label: "Status",
+// // // // //               value: "status",
+// // // // //             },
+// // // // //           ]}
+// // // // //         />
+// // // // //       </div>
 
-// //       {/* Pagination */}
-// //       {!loading && (
-// //         <div className="hidden md:block">
-// //           <Pagination
-// //             totalItems={totalItems}
-// //             itemsPerPage={itemsPerPage}
-// //             onPageChange={handlePageChange}
-// //             currentPage={currentPage}
-// //           />
-// //         </div>
-// //       )}
-// //     </>
-// //   );
-// // };
+// // // // //       {loading ? (
+// // // // //         <div className="flex justify-center items-center md:hidden">
+// // // // //           <CustomLoader />
+// // // // //         </div>
+// // // // //       ) : currentPageRows?.data && currentPageRows?.data?.length > 0 ? (
+// // // // //         <div className="md:hidden mb-10">
+// // // // //           {console.log("🎯 Rendering CouponDetailsCard with data:", currentPageRows?.data)}
+// // // // //           <CouponDetailsCard data={currentPageRows?.data} />
+// // // // //         </div>
+// // // // //       ) : (
+// // // // //         <div className="md:hidden mt-10">
+// // // // //           {console.log("🎯 No data - showing empty state")}
+// // // // //           <NoDataEmptyState
+// // // // //             imgClassName="w-14 h-14"
+// // // // //             textClassName="text-lg"
+// // // // //             className="py-5 px-3 w-full"
+// // // // //           />
+// // // // //         </div>
+// // // // //       )}
+
+// // // // //       {!loading && (
+// // // // //         <div className="hidden md:block">
+// // // // //           <Pagination
+// // // // //             totalItems={totalItems}
+// // // // //             itemsPerPage={itemsPerPage}
+// // // // //             onPageChange={handlePageChange}
+// // // // //             currentPage={currentPage}
+// // // // //           />
+// // // // //         </div>
+// // // // //       )}
+// // // // //     </>
+// // // // //   );
+// // // // // };
+
+
+// // // // // import { useEmptyStates } from "../../utils/hooks";
+// // // // // import { CouponHistoryTableRows } from "./table/table-rows";
+// // // // // import { CouponHistoryTableHeadings } from "./table/table-heading";
+// // // // // import { Pagination } from "../../base-component/ui/pagination/pagination";
+// // // // // import { useCouponHistory } from "../../hooks/couponHistory/useCouponHistory";
+// // // // // import SelectField from "../../base-component/ui/fields/select-fields";
+// // // // // import { CouponDetailsCard } from "../../base-component/ui/coupon-details-card";
+// // // // // import { NoDataEmptyState } from "../../base-component/ui/loadingEffect/no-data-state";
+// // // // // import { CustomLoader } from "../../base-component/ui/loadingEffect/custom-loader";
+
+// // // // // export const CouponHistory = () => {
+// // // // //   const {
+// // // // //     totalItems,
+// // // // //     loading,
+// // // // //     itemsPerPage,
+// // // // //     currentPage,
+// // // // //     headings,
+// // // // //     currentPageRows, // ✅ Always a plain array []
+// // // // //     handlePageChange,
+// // // // //     hanldeSortChange,
+// // // // //     sort,
+// // // // //     totalCount,
+// // // // //   } = useCouponHistory();
+
+// // // // //   // ✅ currentPageRows is a plain array — pass directly, no .data needed
+// // // // //   const CurrentComponent = useEmptyStates(
+// // // // //     <CouponHistoryTableRows data={currentPageRows} />,
+// // // // //     totalCount !== 0,
+// // // // //     loading
+// // // // //   );
+
+// // // // //   return (
+// // // // //     <>
+// // // // //       {/* Desktop Table */}
+// // // // //       <div className="hidden md:block">
+// // // // //         <CouponHistoryTableHeadings
+// // // // //           headings={headings}
+// // // // //           handleSort={hanldeSortChange}
+// // // // //           sortValue={sort}
+// // // // //           isRedeem={true}
+// // // // //         />
+// // // // //         {CurrentComponent}
+// // // // //       </div>
+
+// // // // //       {/* Mobile Header + Sort */}
+// // // // //       <div className="flex items-center justify-between mt-[15px] mb-3 md:hidden">
+// // // // //         <p className="text-[20px] font-semibold">Redeemed Listing</p>
+// // // // //         <SelectField
+// // // // //           handleChange={(value) => hanldeSortChange(value)}
+// // // // //           value={sort || "None"}
+// // // // //           options={[
+// // // // //             { label: "Type", value: "type" },
+// // // // //             { label: "Coupons", value: "coupon" },
+// // // // //             { label: "Redeemed Date", value: "createdAt" },
+// // // // //             { label: "Status", value: "status" },
+// // // // //           ]}
+// // // // //         />
+// // // // //       </div>
+
+// // // // //       {/* Mobile Content — currentPageRows is the array directly */}
+// // // // //       {loading ? (
+// // // // //         <div className="flex justify-center items-center md:hidden">
+// // // // //           <CustomLoader />
+// // // // //         </div>
+// // // // //       ) : currentPageRows.length > 0 ? (
+// // // // //         <div className="md:hidden mb-10">
+// // // // //           <CouponDetailsCard data={currentPageRows} />
+// // // // //         </div>
+// // // // //       ) : (
+// // // // //         <div className="md:hidden mt-10">
+// // // // //           <NoDataEmptyState
+// // // // //             imgClassName="w-14 h-14"
+// // // // //             textClassName="text-lg"
+// // // // //             className="py-5 px-3 w-full"
+// // // // //           />
+// // // // //         </div>
+// // // // //       )}
+
+// // // // //       {/* Pagination */}
+// // // // //       {!loading && (
+// // // // //         <div className="hidden md:block">
+// // // // //           <Pagination
+// // // // //             totalItems={totalItems}
+// // // // //             itemsPerPage={itemsPerPage}
+// // // // //             onPageChange={handlePageChange}
+// // // // //             currentPage={currentPage}
+// // // // //           />
+// // // // //         </div>
+// // // // //       )}
+// // // // //     </>
+// // // // //   );
+// // // // // };
 
 
 
@@ -420,10 +420,6 @@ export const CouponHistory = () => {
     </>
   );
 };
-
-
-
-
 
 
 
