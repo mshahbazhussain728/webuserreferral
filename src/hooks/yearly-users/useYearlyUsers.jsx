@@ -895,14 +895,24 @@ export const useYearlyUsers = () => {
   ];
 
   // ── Table headings ───────────────────────────────────────────────────────
-  const headings = [
-    { label: "User Details",    value: "name"          },
-    { label: "Installed Date",  value: "installedDate" },
-    { label: "Subscribed Date", value: "startDate"     },
-    { label: "Clearance Date",  value: "clearedDate"   },
-    { label: "Plan Type",       value: "planType"      },
-    { label: "Status",          value: "status"        },
-  ];
+  // const headings = [
+  //   { label: "User Details",    value: "name"          },
+  //   { label: "Installed Date",  value: "installedDate" },
+  //   { label: "Subscribed Date", value: "startDate"     },
+  //   { label: "Clearance Date",  value: "clearedDate"   },
+  //   { label: "Plan Type",       value: "planType"      },
+  //   { label: "Status",          value: "status"        },
+  // ];
+
+const headings = [
+  { label: "User Details",    value: "name"           },
+  { label: "Installed Date",  value: "installDate"    },  // ✅ fixed
+  { label: "Subscribed Date", value: "subscribedDate" },  // ✅ fixed
+  { label: "Clearance Date",  value: "clearanceDate"  },  // ✅ fixed
+  { label: "Plan Type",       value: "planType"       },
+  { label: "Status",          value: "status"         },
+];
+
 
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);

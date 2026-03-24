@@ -569,7 +569,7 @@ export const ShareModal = ({ onClose }) => {
 
           <div className="mt-6 text-sm text-gray-600 text-center">
             <p className="mb-3 font-medium">Download from official stores:</p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-stretch">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center whitespace-nowrap">
               <a
                 href={appleStoreLink}
                 target="_blank"
@@ -587,7 +587,7 @@ export const ShareModal = ({ onClose }) => {
                 rel="noopener noreferrer"
                 className={googleClassName}
               >
-                <img src={PlayStore} alt="Play Store" width="17" height="15" style={{ marginRight: "10px" }}
+                <img src={PlayStore} alt="Play Store" width="17" height="15" style={{ marginLeft: "10px" }}
 />
                 Google Play
               </a>
@@ -602,3 +602,8 @@ export const ShareModal = ({ onClose }) => {
     </BaseModal>
   );
 };
+
+
+
+//
+
