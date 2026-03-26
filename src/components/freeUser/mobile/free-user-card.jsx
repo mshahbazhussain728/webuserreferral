@@ -46,3 +46,5 @@ export const FreeUserCard = ({ data }) => {
     </div>
   );
 };
+
+

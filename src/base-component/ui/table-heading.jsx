@@ -52,6 +52,7 @@ export const TableHeading = ({
   handleSort,
   currentSort,
   isRedeem,
+
 }) => {
   const handleSortClicked = () => {
     if (handleSort) {
@@ -78,7 +79,4 @@ export const TableHeading = ({
   );
 };
 
-
-
-//
 

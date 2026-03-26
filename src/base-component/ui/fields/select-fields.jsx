@@ -90,7 +90,7 @@ export default function SelectField({
 
                   return (
                     <div
-                      className={`flex justify-start px-2 py-1 cursor-pointer mr-1 hoverTransetion rounded-md ${
+                      className={`flex justify-center px-2 py-1 cursor-pointer mr-1 hoverTransetion rounded-md ${
                         isSelected
                           ? "bg-primary text-white hover:bg-buttonHover"
                           : "bg-white hover:bg-[#eaebec]"
@@ -110,3 +110,7 @@ export default function SelectField({
     </div>
   );
 }
+
+
+
+
